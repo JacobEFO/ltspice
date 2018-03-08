@@ -1,3 +1,4 @@
+import ltspice
 import random
 
 def gen_data():
@@ -9,11 +10,10 @@ def gen_data():
 
 def format_data_line(datap1):
 	time, db, degree = datap1[0], datap1[1], datap1[2]
-	formatted = "{0:.15e}\t({1:.15e}db, {2:.15e}°)\n"
+	formatted = "{0:.15e}\t({1:.15e}dB,{2:.15e}°)\n"
 	return formatted.format(time, db, degree)
 
 def create_test_file(fname, lines):
-	header = "Time Gain Degree"
 	data = ""
 	for line in range(lines):
 		data += format_data_line(gen_data())
@@ -22,8 +22,30 @@ def create_test_file(fname, lines):
 		f.write(data)
 	return
 
+def setupTestEnv(fname):
+	lns = 10 # number of lines in test file
+	create_test_file(fname, lns)
+
+# Test error handling when looking up file
+def testFileError():
+	time, mag, deg = ltspice.ltspiceReadAC("foobar.txt")
+
+# Tests error handling for .txt syntax
+def testTabError():
+	pass
+
+def testParsing(fname):
+	time, mag, deg = ltspice.ltspiceReadAC(fname)
+	print(time)
+	print(mag)
+	print(deg)
+
 
 if __name__ == '__main__':
-	lns = 10 # number of lines in test_file
 	fname = "test.txt"
-	create_test_file(fname, lns)
+	setupTestEnv(fname) # create test
+	testParsing(fname)
+	
+	# Test file errors/handling
+	testFileError()
+	# testTabError() # Include this once function has been made
