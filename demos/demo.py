@@ -14,7 +14,7 @@ def tf(s):
 
 if __name__ == '__main__':
 	# Fetch data from "lowpassRC.txt"
-	# fname = "lowpassRC.txt"
+	fname = "lowpassRC.txt"
 	freq, mag, deg = ltspice.ltspiceReadAC(fname)
 
 	llimit = np.log10(1) # 1 Hz from LTspice
