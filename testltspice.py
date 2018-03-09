@@ -2,16 +2,16 @@ import ltspice
 import random
 
 def gen_data():
-	time = random.randint(0,100)*1e6
+	freq = random.randint(0,100)*1e6
 	db = random.lognormvariate(2,0.5)
 	phase = random.uniform(0,360)
 	truncate = lambda x: float('{:.15e}'.format(x))
-	return truncate(time), truncate(db), truncate(phase)
+	return truncate(freq), truncate(db), truncate(phase)
 
 def format_data_line(datap1):
-	time, db, degree = datap1[0], datap1[1], datap1[2]
+	freq, db, degree = datap1[0], datap1[1], datap1[2]
 	formatted = "{0:.15e}\t({1:.15e}dB,{2:.15e}°)\n"
-	return formatted.format(time, db, degree)
+	return formatted.format(freq, db, degree)
 
 def create_test_file(fname, lines):
 	data = ""
@@ -28,15 +28,15 @@ def setupTestEnv(fname):
 
 # Test error handling when looking up file
 def testFileError():
-	time, mag, deg = ltspice.ltspiceReadAC("foobar.txt")
+	freq, mag, deg = ltspice.ltspiceReadAC("foobar.txt")
 
 # Tests error handling for .txt syntax
 def testTabError():
 	pass
 
 def testParsing(fname):
-	time, mag, deg = ltspice.ltspiceReadAC(fname)
-	print(time)
+	freq, mag, deg = ltspice.ltspiceReadAC(fname)
+	print(freq)
 	print(mag)
 	print(deg)
 
