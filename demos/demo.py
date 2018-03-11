@@ -31,7 +31,7 @@ if __name__ == '__main__':
 	plt.title('Magnitude vs. Frequency')
 	plt.legend()
 	plt.grid()
-	plt.savefig("magnitude.png")
+	plt.savefig("../figures/magnitude.png")
 	# plt.show()
 
 	# Phase
@@ -43,5 +43,5 @@ if __name__ == '__main__':
 	plt.title('Phase vs. Frequency')
 	plt.legend()
 	plt.grid()
-	plt.savefig("phase.png")
+	plt.savefig("../figures/phase.png")
 	# plt.show()
