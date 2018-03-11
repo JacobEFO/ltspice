@@ -1,4 +1,4 @@
-import sys
+import sys, codecs
 
 # Reads every line and formats into: freq, magnitude, degree
 def parse_line(linestr):
@@ -24,14 +24,14 @@ def parse_line(linestr):
 def ltspiceReadAC(fname):
 	freq, mag, deg = [], [], []
 	try:
-		with open(fname, 'r', encoding='cp1252') as f:
-			i = 0 # File skipper variable
+		with open(fname, 'r', encoding='cp1252') as f:			
+			i = 0
 			for line in f:
 				if i == 0:
 					i += 1
-					break
-				freqtmp, magtmp, degtmp = parse_line(line)
-				freq.append(freqtmp), mag.append(magtmp), deg.append(degtmp)
+				else:
+					freqtmp, magtmp, degtmp = parse_line(line)
+					freq.append(freqtmp), mag.append(magtmp), deg.append(degtmp)
 	except OSError as err:
 		print("OS error: {0}".format(err))
 	
