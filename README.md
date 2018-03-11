@@ -11,6 +11,10 @@ Working example:
 
 #Transfer function goes here#
 
+<p align="center">
 ![alt text](demos/magnitude.png "Magnitude")
+<\p>
 
+<p align="center">
 ![alt text](demos/phase.png "Phase")
+<\p>
