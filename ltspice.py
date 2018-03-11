@@ -25,7 +25,11 @@ def ltspiceReadAC(fname):
 	freq, mag, deg = [], [], []
 	try:
 		with open(fname, 'r', encoding='cp1252') as f:
+			i = 0 # File skipper variable
 			for line in f:
+				if i == 0:
+					i += 1
+					break
 				freqtmp, magtmp, degtmp = parse_line(line)
 				freq.append(freqtmp), mag.append(magtmp), deg.append(degtmp)
 	except OSError as err:
