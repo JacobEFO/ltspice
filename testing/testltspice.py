@@ -4,6 +4,8 @@ parentdir = os.path.dirname(currentdir)
 sys.path.insert(0,parentdir) 
 
 import ltspice, random, codecs
+import numpy as np
+import matplotlib.pyplot as plt
 
 def gen_data():
 	freq = random.randint(0,100)*1e6
@@ -22,8 +24,8 @@ def create_test_file(fname, lines):
 	for line in range(lines):
 		data += format_data_line(gen_data())
 
-	with open(fname, 'w') as f:
-		f.write("Header: Will this work, I think so\n")
+	with open(fname, 'w', encoding='cp1252') as f:
+		# f.write("Header: Will this work, I think so\n")
 		f.write(data)
 	return
 
@@ -41,10 +43,24 @@ def testTabError():
 
 def testParsing(fname):
 	freq, mag, deg = ltspice.ltspiceReadAC(fname)
-	print(freq)
-	print(mag)
-	print(deg)
 
+	# Magnitude
+	plt.figure(1)
+	plt.scatter(freq, mag, color = 'red', linewidth=2)
+	plt.ylabel('Gain / dB')
+	plt.xlabel('Frequency / Hz')
+	plt.title('Magnitude vs. Frequency')
+	plt.grid()
+	plt.show()
+
+	# Phase
+	plt.figure(2)
+	plt.scatter(freq, deg, color = 'red', linewidth=2)
+	plt.ylabel('Phase / $\degree$')
+	plt.xlabel('Frequency / Hz')
+	plt.title('Phase vs. Frequency')
+	plt.grid()
+	plt.show()
 
 if __name__ == '__main__':
 	fname = "test.txt"
@@ -52,5 +68,5 @@ if __name__ == '__main__':
 	testParsing(fname)
 	
 	# Test file errors/handling
-	# testFileError()
+	testFileError()
 	# testTabError() # Include this once function has been made
