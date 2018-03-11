@@ -9,7 +9,8 @@ To use this import ltspice and use the function "ltspiceReadAC(filename)" which 
 
 ## Examples of the ltspice interface in play
 
-$H(s) = \frac{1}{1 + RCs}$
+![equation](http://www.sciweavers.org/tex2img.php?eq=1%2Bsin%28mc%5E2%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=)
+
 <p align="center">
   <img src="figures/magnitude.png" alt="Magnitude"/>
 </p>
