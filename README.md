@@ -7,11 +7,9 @@ The functions presented are intended to read an LTspice exported version of an A
 To use this import ltspice and use the function "ltspiceReadAC(filename)" which will return three variables: frequency, magnitude and phase (in degree).
 
 
-## Examples of the ltspice interface in play
+## Example of the ltspice repository used
 
-<p align="center">
-  <img src="https://www.codecogs.com/eqnedit.php?latex=\mathcal{W}(A,f)&space;=&space;(T,\bar{f})" alt="Transfer Function"/>
-</p>
+The following example shows a calculated and simulated transfer function from a simple first order low-pass RC filter.
 
 <p align="center">
   <img src="figures/magnitude.png" alt="Magnitude"/>
