@@ -7,7 +7,7 @@ The functions presented are intended to read an LTspice exported version of an A
 To use this import ltspice and use the function "ltspiceReadAC(filename)" which will return three variables: frequency, magnitude and phase (in degree).
 
 
-Working example:
+# Examples of the ltspice interface in play
 
 #Transfer function goes here#
 
