@@ -11,10 +11,10 @@ def parse_line(linestr):
 		if (parenst == -1) or (parenend == -1):
 			ValueError
 
-		magstr, phastr = rest[parenst:parenend].split(',')
+		magstr, degstr = rest[parenst:parenend].split(',')
 		freq = float(freqstr) 
 		mag = float(magstr.replace('dB', ''))
-		deg = float(phastr.replace('°', ''))
+		deg = float(degstr.replace('°', ''))
 
 		return freq, mag, deg
 	except ValueError as e:
@@ -24,7 +24,7 @@ def parse_line(linestr):
 def ltspiceReadAC(fname):
 	freq, mag, deg = [], [], []
 	try:
-		with open(fname, 'r') as f:
+		with open(fname, 'r', encoding='cp1252') as f:
 			for line in f:
 				freqtmp, magtmp, degtmp = parse_line(line)
 				freq.append(freqtmp), mag.append(magtmp), deg.append(degtmp)

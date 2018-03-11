@@ -42,10 +42,12 @@ def testParsing(fname):
 
 
 if __name__ == '__main__':
-	fname = "test.txt"
-	setupTestEnv(fname) # create test
+	# fname = "test.txt"
+	# fname = "nosign.txt"
+	fname = "withsign.txt"
+	# setupTestEnv(fname) # create test
 	testParsing(fname)
 	
 	# Test file errors/handling
-	testFileError()
+	# testFileError()
 	# testTabError() # Include this once function has been made
