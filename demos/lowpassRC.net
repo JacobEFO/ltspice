@@ -1,0 +1,7 @@
+* C:\Users\JEO\Google Drive\Python\LTspice\demos\lowpassRC.asc
+R1 out N001 1k
+C1 out 0 47µ
+V1 N001 0 AC 1
+.ac dec 100 1 100k
+.backanno
+.end
