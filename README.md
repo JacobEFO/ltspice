@@ -9,7 +9,7 @@ To use this import ltspice and use the function "ltspiceReadAC(filename)" which 
 
 ## Examples of the ltspice interface in play
 
-![equation](http://www.sciweavers.org/tex2img.php?eq=1%2Bsin%28mc%5E2%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=)
+![equation](https://www.codecogs.com/eqnedit.php?latex=\mathcal{W}(A,f)&space;=&space;(T,\bar{f}))
 
 <p align="center">
   <img src="figures/magnitude.png" alt="Magnitude"/>
