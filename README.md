@@ -11,6 +11,6 @@ To use this import ltspice and use the function "ltspiceReadAC(filename)" which 
 
 #Transfer function goes here#
 
-![alt text](demos/magnitude.png "Magnitude")
+![alt text](figures/magnitude.png "Magnitude")
 
-![alt text](demos/phase.png "Phase")
+![alt text](figures/phase.png "Phase")
