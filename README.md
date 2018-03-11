@@ -10,6 +10,13 @@ To use this import ltspice and use the function "ltspiceReadAC(filename)" which 
 ## Examples of the ltspice interface in play
 
 #Transfer function goes here#
+<p align="center">
+  <img src="figures/magnitude.png" alt="Magnitude"/>
+</p>
+
+<p align="center">
+  <img src="figures/phase.png" alt="Magnitude"/>
+</p>
 
 ![alt text](figures/magnitude.png "Magnitude")
 
