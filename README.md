@@ -9,7 +9,7 @@ To use this import ltspice and use the function "ltspiceReadAC(filename)" which 
 
 ## Examples of the ltspice interface in play
 
-#Transfer function goes here#
+$H(s) = \frac{1}{1 + RCs}$
 <p align="center">
   <img src="figures/magnitude.png" alt="Magnitude"/>
 </p>
@@ -17,7 +17,3 @@ To use this import ltspice and use the function "ltspiceReadAC(filename)" which 
 <p align="center">
   <img src="figures/phase.png" alt="Magnitude"/>
 </p>
-
-![alt text](figures/magnitude.png "Magnitude")
-
-![alt text](figures/phase.png "Phase")
