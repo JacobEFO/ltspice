@@ -9,7 +9,9 @@ To use this import ltspice and use the function "ltspiceReadAC(filename)" which 
 
 ## Examples of the ltspice interface in play
 
-![equation](https://www.codecogs.com/eqnedit.php?latex=\mathcal{W}(A,f)&space;=&space;(T,\bar{f}))
+<p align="center">
+  <img src="https://www.codecogs.com/eqnedit.php?latex=\mathcal{W}(A,f)&space;=&space;(T,\bar{f})" alt="Transfer Function"/>
+</p>
 
 <p align="center">
   <img src="figures/magnitude.png" alt="Magnitude"/>
