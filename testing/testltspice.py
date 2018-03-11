@@ -1,5 +1,9 @@
-import ltspice
-import random
+import os,sys,inspect
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0,parentdir) 
+
+import ltspice, random, codecs
 
 def gen_data():
 	freq = random.randint(0,100)*1e6
@@ -19,6 +23,7 @@ def create_test_file(fname, lines):
 		data += format_data_line(gen_data())
 
 	with open(fname, 'w') as f:
+		f.write("Header: Will this work, I think so\n")
 		f.write(data)
 	return
 
@@ -42,10 +47,8 @@ def testParsing(fname):
 
 
 if __name__ == '__main__':
-	# fname = "test.txt"
-	# fname = "nosign.txt"
-	fname = "withsign.txt"
-	# setupTestEnv(fname) # create test
+	fname = "test.txt"
+	setupTestEnv(fname) # create test
 	testParsing(fname)
 	
 	# Test file errors/handling
