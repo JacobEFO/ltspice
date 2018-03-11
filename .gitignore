@@ -3,3 +3,4 @@ test.txt
 *.raw
 *.log
 *.net
+.DS_Store
