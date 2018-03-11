@@ -11,6 +11,6 @@ Working example:
 
 #Transfer function goes here#
 
-![alt text](demo/magnitude.pdf "Magnitude")
+![alt text](demo/magnitude.png "Magnitude")
 
-![alt text](demo/phase.pdf "Phase")
+![alt text](demo/phase.png "Phase")

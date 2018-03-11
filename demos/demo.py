@@ -30,7 +30,7 @@ if __name__ == '__main__':
 	plt.xlabel('Frequency / Hz')
 	plt.legend()
 	plt.grid()
-	plt.savefig("magnitude.pdf")
+	plt.savefig("magnitude.png")
 	# plt.show()
 
 	# Phase
@@ -40,5 +40,5 @@ if __name__ == '__main__':
 	plt.ylabel('Phase / $\degree$')
 	plt.xlabel('Frequency / Hz')
 	plt.grid()
-	plt.savefig("phase.pdf")
+	plt.savefig("phase.png")
 	# plt.show()
